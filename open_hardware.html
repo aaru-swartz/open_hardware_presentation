@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Open Hardware</title>
+
+		<meta name="description" content="OPEN SOURCE HARDWARE & PROTOTYPING">
+		<meta name="author" content="N.Venkatakrishnan">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+b
+        <body>
+
+            <div class="reveal">
+                <div class="slides">
+                    <section>
+                        <section>
+                            <h1>Hello.</h1>
+                        </section>
+                        <section>
+                            <h2>Vignesh . R</h2>
+                            <h3>Free Software & Hardware Activist</h3>
+                        </section>
+                    </section>
+                    
+                    <section>
+                        <section>
+                            <h1>Agenda</h1>
+                        </section>
+                        <section>
+                            <h2>• Concept of Open Design<br></h2>
+				<h2><br></h2>
+                            <h2>• Open Source Hardware Arduino & Beagle board<br></h2>
+				<h2><br></h2>
+			    <h2>• Building Scientific Instruments with Arduino</h2>
+                        </section>
+                    </section>
+                    
+                    <section>
+                        <section>
+                            <h1>OPEN DESIGN
+			    </a>
+			    </h1>
+                        </section>
+                        <section>
+                            <h3>development of physical products,machines and systems - using
+				<h2>publicly shared design </h2>information</h3>
+                        </section>
+                        <section>
+                            <h3>making of <h2>both</h2> free and open source <h2>software</h2> (FOSS) as well as <h2>open-source hardware</h2></h3>
+                        </section>
+                        <section>
+                            <h3>design as source code to a physical object and change the object via changing the source</h3>
+                        </section>
+                    </section>
+                    
+                    <section>
+			<section>
+				<img src="images/arduino_logo_1.jpg">
+			</section>
+                        <section>
+                            <h2>What is <h1>Arduino?</h1></h2>
+                        </section>
+                        <section>
+                            <h3>easy-to-use open-source prototyping hardware and software platform</h3>
+                        </section>
+			<section>
+				<img src="images/arduino_uno.png">
+			</section>
+                        <section>
+                            <p><h3>Arduino boards are able <br><br>
+				<ul>
+					<li>– to read inputs (light on a sensor, a finger on a button, or a Twitter message)</li> <br>
+					<li>– turn it into an output (activating a motor, turning on an LED, publishing something online)</li></h3>
+				</ul>
+			   </p>
+                        </section>
+                        <section>
+                            <h3>You can tell your board what to <br><br>do by sending a set of <br><br>instructions to the <br><br>microcontroller on the board.</h3>
+                        </section>
+			<section>
+				<h3>To do so you use the Arduino <br><br>programming Language<br><br> (based on Wiring),
+					<br><br> and the Arduino Software (IDE),<br><br> based on Processing.</h3>
+			</section>
+			<section>
+					<h2>BLINKING LED – ARDUINO CODE</h2>
+					<pre><code class="hljs" data-trim contenteditable> 
+void setup() // Executed only once at Power On /Reset
+{
+pinMode(11,OUTPUT); // Initializes Pin 11 as an OUTPUT
+}
+void loop() // keeps on running infinitely till the board is powered off
+{
+digitalWrite(11,HIGH); // Turns Pin 11 ON
+delay(1000); // Waits for 1 second (1000 milliseconds = 1 second)
+digitalWrite(11,LOW) ;// Turns Pin 11 OFF
+delay(1000); // Waits for 1 second (1000 milliseconds = 1 second)
+}
+					</code>
+					</pre>
+			</section>
+                    </section>
+                    
+                    <section>
+                        <section>
+                            <h1>Queries?</h1>
+                        </section>
+                        <section>
+                            <h1>Thank You</h1>
+                            <h2><br><br><br>Courtesy : </h2><h3>Wikipedia<br> www.arduino.cc<br> M/S Simple labs, chennai</h3>
+                        </section>
+                    </section>
+                    
+                </div>
+            </div>
+            
+            <script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+            
+        <script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+         
+        </body>
